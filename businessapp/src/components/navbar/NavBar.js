@@ -21,6 +21,15 @@ const NavBar = () => {
       </ul>
       <div className="sm:hidden flex flex-1 justify-end items-center">
         <img src={isMenuOpen ? close : menu} alt='menu logo' className="w-[28px] h-[28px] object-contain" onClick={handleToggle} />
+        <div className={`${isMenuOpen ? 'flex' : 'hidden'} p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}>
+          <ul className="list-none flex justify-end items-center flex-1 flex-col">
+            {navLinks.map((nav, index) => (
+              <li key={nav.id} className={`font-poppins font-normal cursor-pointer text-[16px] ${index === navLinks.length - 1 ? 'mr-0' : 'mb-4'} text-white`}>
+                <a href={`#${nav.id}`}>{nav.title}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </nav>
   )
