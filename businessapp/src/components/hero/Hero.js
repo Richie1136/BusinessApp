@@ -27,11 +27,14 @@ const Hero = () => (
         most likely to fit your needs. We examine annual percentage rates,
         annual fees.</p>
     </div>
-    <div className="">
+    <div className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`}>
       <img className="w-[100%] h-[100%] relative z-[5]" src={robot} alt='robot img' />
       <div className="absolute z-[0] w-[40%] h-[35%] top-0 pink-gradient" />
       <div className="absolute z-[1] w-[80%] h-[80%] rounded-full bottom-40 white-gradient" />
       <div className="absolute z-[0] w-[50%] h-[50%] right-20 bottom-20 blue-gradient" />
+    </div>
+    <div className={`ss:hidden ${styles.flexCenter}`}>
+      <GetStarted />
     </div>
   </section>
 )
