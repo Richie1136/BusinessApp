@@ -1,5 +1,5 @@
 
-const FeedbackCard = () => {
+const FeedbackCard = ({ name, title, image, content }) => {
   return (
     <div>FeedbackCard</div>
   )
